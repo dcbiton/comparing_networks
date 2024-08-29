@@ -1,0 +1,18 @@
+_target_: ctd.data_modeling.datamodules.LFADS.datamodule.BasicDataModule
+prefix: 20240122_NBFF_GRU
+n_neurons: 50
+seed: 0
+batch_size: 500
+provide_inputs: True
+
+embed_dict:
+  rect_func: exp
+  fr_scaling: 2.0
+noise_dict:
+  obs_noise: pseudoPoisson
+  dispersion: 1.0
+
+batch_keys:
+  - inputs
+  - latents
+  - activity
